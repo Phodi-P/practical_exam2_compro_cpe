@@ -4,9 +4,9 @@
 using namespace std;
 
 //Write prototype of av() here.
-double min(double x, double y);
-double max(double x, double y);
-double av(double x, double y);
+double min(double, double);
+double max(double, double);
+double av(double, double);
 
 int main(){
     cout << av(-2.5,1.1) << "\n";
