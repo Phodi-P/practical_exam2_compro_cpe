@@ -4,6 +4,9 @@
 using namespace std;
 
 //Write prototype of av() here.
+double min(double x, double y);
+double max(double x, double y);
+double av(double x, double y);
 
 int main(){
     cout << av(-2.5,1.1) << "\n";
@@ -17,3 +20,19 @@ int main(){
 }
 
 //Write function definition of av() here.
+double av(double x, double y)
+{
+    if(x <= 0 || y <= 0) return 0;
+    if((max(x,y)/min(x,y))<=100) return sqrt(x*y);
+    return av(x,(x+y)/2) + av(y,(x+y)/2);
+}
+double min(double x, double y)
+{
+    if(x > y) return y;
+    return x;
+}
+double max(double x, double y)
+{
+    if(x < y) return y;
+    return x;
+}
